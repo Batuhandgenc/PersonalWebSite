@@ -1,0 +1,60 @@
+*
+{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+
+}
+body
+{
+    min-height: 100%;
+    background: #ffffff;
+}
+.conatiner
+{
+    position: relative ;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.daire
+{
+    position: relative;
+    display: flex;
+}
+.daire span
+{
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background: #000000;
+    margin:0px 50px;
+    border-radius: 30%;
+    box-shadow: 0 0 0 10px #00000044, 
+    0 0 10px #000000,
+    0 0 25px #000000;
+    animation: animate 20s linear infinite; 
+    animation-duration: calc(125s / var(--i));
+}
+.daire span:nth-child(even)
+{
+    background: #000000;
+    box-shadow: 0 0 0 10px #00000044,
+    0 0 10px #000000,
+    0 0 25px #000000;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    50%
+    {
+        transform: translateY(-10vh) scale(0.5);
+    }
+    100%
+    {
+        transform: translateY(-50vh) scale(1);
+    }
+}
